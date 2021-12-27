@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 20px 0px;
+}
+
+.navbar ul li {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 20px;
+  transition: all 0.5s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 10px white;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(4, 74, 92, 0.4);
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: darkcyan;
+  height: 90px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: auto;
+  right: auto;
+}
+
+.heading {
+  font-family: initial;
+  font-size: 2rem;
+  text-align: center;
+  margin: 40px 0px;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 25px;
+  margin-bottom: 50px;
+}
+
+.co-about {
+  display: flex;
+}
+
+.co-about img {
+  width: 200px;
+  height: 250px;
+  border-radius: 25%;
+  display: block;
+  margin: auto;
+  padding: 15px;
+  transition: 0.2s;
+}
+
+.co-about img:hover {
+  transform: scale(1.07);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+}
+
+.intro h2 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 20%;
+  margin-inline-end: 20%;
+}
+
+#hobby {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin-bottom: 50px;
+  background-color: rgba(4, 74, 92, 0.4);
+  height: 500px;
+}
+
+.co-hobby {
+  display: flex;
+}
+
+.co-hobby p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 20%;
+  margin-inline-end: 20%;
+}
+
+.co-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.co-img img {
+  width: 250px;
+  height: 150px;
+  margin: 20px;
+  transition: 1.2s;
+  border-radius: 20px;
+  animation: animasi1 2s ease infinite alternate;
+}
+
+@keyframes animasi1 {
+  0% {
+    margin: 10px;
+  }
+}
+/* .co-img img:hover {
+  transform: scale(1.08);
+} */
+
+#portofolio {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.co-porto {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.co-porto img {
+  width: 350px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 50px;
+  margin-bottom: 50px;
+  animation: animasi2 3s ease infinite alternate;
+}
+
+@keyframes animasi2 {
+  0% {
+    border-radius: 0%;
+    transform: scale(1.07);
+  }
+}
+
+.icon {
+  display: flex;
+  text-align: center;
+}
+
+.tombol {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: #f1f1f1;
+  margin: 15px;
+  border-radius: 30px;
+  box-sizing: 0 10px 20px -5px #00000070;
+  overflow: hidden;
+  position: relative;
+  color: darkcyan;
+}
+
+.tombol i {
+  transition: 0.3s linear;
+  font-size: 50px;
+  line-height: 100px;
+}
+
+.tombol i:hover {
+  transform: scale(1.3);
+  color: black;
+}
+
+.tombol::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -120%;
+  top: 90%;
+  transform: rotate(45deg);
+  background: blue;
+}
+
+.tombol:hover::before {
+  left: -25%;
+  top: -25%;
+  animation: sosmed 0.7s 0.5;
+  opacity: 0.5;
+}
+
+@keyframes sosmed {
+  0% {
+    left: -120%;
+    top: 90%;
+  }
+  50% {
+    left: 15%;
+    top: -30%;
+  }
+  100% {
+    left: -15%;
+    top: -15%;
+  }
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: rgba(4, 74, 92, 0.9);
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.input {
+  padding: 15px;
+  margin: 20px;
+  width: 30%;
+  border: none;
+  outline: none;
+}
+
+#mesage {
+  width: 20%;
+  padding: 15px;
+  margin: 15px;
+  border: none;
+  outline: none;
+}
+
+#kirim {
+  padding: 10px;
+  width: 10%;
+  margin: 45px;
+  border: none;
+  outline: none;
+}
+
+#kirim:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px white;
+}
